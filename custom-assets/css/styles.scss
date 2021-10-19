@@ -11,7 +11,7 @@ body {
 }
 
 
-                        //* SCROLLING PART *//
+   //* SCROLLING PART *//
 
 .vertical-section {
 	height: 100vh;
@@ -50,7 +50,7 @@ section {
 	font-size: 4ch;
 }
 
-        //* END SCROLLING PART *//
+ //* END SCROLLING PART *//
 
 
 .container-homepage-two {
@@ -82,6 +82,10 @@ section {
             border-bottom: 100px solid #32557f;
             -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0, 91% 100%, 0 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 0, 91% 100%, 0 100%);
+            -webkit-animation: breathing 4s ease-out infinite normal;
+            animation: breathing 4s ease-out infinite normal;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
         }
     }
     
@@ -106,6 +110,7 @@ section {
             border-bottom: 100px solid #32557f;
             -webkit-clip-path: polygon(0 0, 100% 0%, 91% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0%, 91% 0, 100% 100%, 0 100%);
+            animation: Leftbouncein 2s ease-in 0s 1 normal forwards;
         }
     }
     
@@ -170,11 +175,106 @@ section {
     }
 }
 
+//* ANIMATION EFFECTS **//
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  100% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  100% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
 
 
+@keyframes Leftbouncein {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 1;
+      transform: translateX(-48px);
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    40% {
+      animation-timing-function: ease-in;
+      transform: translateX(-26px);
+    }
+  
+    65% {
+      animation-timing-function: ease-in;
+      transform: translateX(-13px);
+    }
+  
+    82% {
+      animation-timing-function: ease-in;
+      transform: translateX(-6.5px);
+    }
+  
+    93% {
+      animation-timing-function: ease-in;
+      transform: translateX(-4px);
+    }
+  
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+      animation-timing-function: ease-out;
+      transform: translateX(0px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 
 
   
-
+//* ANIMATION EFFECTS **//
   
   
